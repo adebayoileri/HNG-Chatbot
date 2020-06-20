@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(http://media.foxbusiness.com/BrightCove/854081161001/201805/1896/854081161001_5779125779001_5779116637001-vs.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.chat-box{
+    display: flex;
+    box-sizing: border-box;
+    max-width: 320px;
+    height: 80vh;
+    background-color: aqua;
+    margin: 5% auto;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}

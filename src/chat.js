@@ -1,14 +1,3 @@
-// const watson = require('ibm-watson');
-
-// const assistant = new watson.AssistantV1({
-//   username: process.env.WATSON_USERNAME,
-//   password: process.env.WATSON_PASSWORD,
-//   url:      process.env.WATSON_URL,
-//   version:  process.env.WATSON_VERSION
-// });
-
-
-
 const AssistantV1 = require('ibm-watson/assistant/v1');
 const { IamAuthenticator } = require('ibm-watson/auth');
  
@@ -18,18 +7,6 @@ const assistant = new AssistantV1({
   version: '2020-06-19'
 });
  
-// assistant.message(
-//   {
-//     input: { text: "What's the weather?" },
-//     workspaceId: '<workspace id>'
-//   })
-//   .then(response => {
-//     console.log(JSON.stringify(response.result, null, 2));
-//   })
-//   .catch(err => {
-//     console.log(err);
-  // });
-
 exports.getMessage = body =>
   new Promise((resolve, reject) => {
     assistant.message(

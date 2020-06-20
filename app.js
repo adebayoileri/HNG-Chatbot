@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const path = require('path');
 require('dotenv').config();
 
 const  bodyParser = require('body-parser'),
@@ -15,7 +16,13 @@ const ask = require('./src/controllers/message.js').ask;
 
 app.use(bodyParser.json(bodyParserJsonConfig()));
 
-app.get('/', (req, res) => res.send('Hola Greg!'))
+app.use(express.static('public'));
+
+app.get('/',(req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
+
+// app.get('/', (req, res) => res.send('Bot boy!'))
 app.post('/ask', ask)
 
 const PORT = process.env.PORT || 4400
